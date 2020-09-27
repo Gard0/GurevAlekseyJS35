@@ -1,7 +1,9 @@
 let button = document.getElementById('button');
 let request = document.getElementById('request');
+let urlWindows = window.location.search;
+
 function clickButton (){
-    github(request)
+  github(request)
 }
 
 function github(request) {
@@ -14,7 +16,7 @@ function github(request) {
     .then(res => res.json())
     .then(json => {
       if (json.login != null) {
-        user.value = json.html_url.slice(19);
+        user.value = json.name;
         user.classList.remove('hidden')
 
         description.value = json.bio;
@@ -42,6 +44,10 @@ function github(request) {
     .catch(err => console.log(err +' '+ 'Информация о пользователе не доступна'));
 }
 
+if (urlWindows !=""){
+  request.value = urlWindows.slice(10);
+  clickButton();
+}
 
 button.addEventListener('click',clickButton);
 
