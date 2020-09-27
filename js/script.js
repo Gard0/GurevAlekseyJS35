@@ -14,7 +14,7 @@ function github(request) {
     .then(res => res.json())
     .then(json => {
       if (json.login != null) {
-        user.value = json.name;
+        user.value = json.html_url.slice(19);
         user.classList.remove('hidden')
 
         description.value = json.bio;
@@ -23,7 +23,7 @@ function github(request) {
         img.src = json.avatar_url;
         imageAvatar.classList.remove('hidden')
 
-        url.href = `https://github.com/${request.value}`
+        url.href = json.html_url;
         url.classList.remove('hidden')
 
       } else {
