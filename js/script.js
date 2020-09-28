@@ -95,7 +95,7 @@ function github(request,dataCurrent) {
 }
 
 if (urlWindows !=""){
-  request.value = urlWindows.slice(10);
+  request.value = urlWindows.split("=")[1];
   clickButton();
 }
 
