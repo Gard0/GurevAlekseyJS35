@@ -1,7 +1,12 @@
 
 .main {
+  position: relative;
   padding-top: 30px;
   text-align: center;
+}
+
+.search-container {
+  opacity: 50%;
 }
 
 .button {
@@ -41,4 +46,14 @@
 
 .red {
   color: red;
+}
+
+.data {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.label{
+  margin-bottom: 5px;
+  color: green;
 }

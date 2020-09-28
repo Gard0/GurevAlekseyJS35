@@ -5,18 +5,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/preloader.css">
   <title>Fetch</title>
 </head>
 
 <body>
   <main class="main">
+    <div class="preloader">
+      <div class="hidden" id='loader'>
+        <div class="loadingio-spinner-wedges-kwon7q38jr"><div class="ldio-dpe9vvynjmr">
+      <div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div>
+      </div></div>
+      </div>
+    </div>
+    <div class="search-container" id="searchContainer">   
+    <label for="request">введите имя для поиска</label>
     <input class="input" type="text" id="request" placeholder="6thSence">
     <button class="button" type="submit" id="button">запросить данные</button>
+    </div>  
     <section class="response_container">
+      <label class="label hidden" id="labelData" for="data">Дата поиска</label>
+      <input class="hidden data input text" type="text" id="data">
       <figure class="image-avatar hidden" id="imageAvatar">
         <img class="image-avatar__img" id="img" src="" alt="аватарка">
       </figure>
+      <label class="label hidden" id="labelUser" for="user">Имя пользователя</label>
       <input class="input text hidden" type="text" id="user">
+      <label class="label hidden" id="labelDescription" for="description">Инфо</label>
       <textarea class="input text hidden" type="text" id="description" rows="5" placeholder="Био"></textarea>
       <a target="_blank" href="#" class="hidden" id="url">ссылка на профиль</a>
     </section>
